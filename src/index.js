@@ -1,18 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { Web3ReactProvider } from "@web3-react/core";
-import { getLibrary } from "./connect/library";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import { ChakraProvider, theme } from '@chakra-ui/react'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Web3ReactProvider getLibrary={getLibrary}>
+    <ChakraProvider theme={theme}>
       <App />
-    </Web3ReactProvider>
+    </ChakraProvider>
   </React.StrictMode>,
-  document.getElementById("root")
-);
-
-reportWebVitals();
+  document.getElementById('root')
+)
